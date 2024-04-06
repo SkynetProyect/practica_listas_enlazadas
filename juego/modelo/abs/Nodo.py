@@ -1,5 +1,7 @@
 class Nodo:
-    def __init__(self, valor: object):
+    def __init__(self, valor):
         self.previo: Nodo = None
-        self.valor: object = valor
+        self.valor = valor
         self.siguiente: Nodo = None
+
+

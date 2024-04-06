@@ -6,7 +6,7 @@ class LinkedList:
         self.longitud: int = 1
         self.cabeza: Nodo = inicial
         self.cola: Nodo = inicial
-        self.debug: bool = True  # uso personal para pruebas
+        self.debug: bool = False  # uso personal para pruebas
 
     def __iter__(self):  # chequeado
         actual: Nodo = self.cabeza
@@ -19,6 +19,7 @@ class LinkedList:
             yield actual
             actual = actual.siguiente
             iteraciones -= 1
+
 
     def agregar(self, nodo: Nodo):  # chequeado
         if self.debug:
@@ -105,3 +106,7 @@ class LinkedList:
         self.longitud = 0
         self.cabeza: Nodo
         self.cola: Nodo
+
+    def __str__(self):
+        result = [str(x.valor) for x in self]
+        return ' '.join(result)
