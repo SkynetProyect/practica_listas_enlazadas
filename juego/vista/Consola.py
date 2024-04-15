@@ -14,8 +14,15 @@ def menu():
         tablero_con_variables = MatrizConVariables(tablero, dificultad)
         print(tablero_con_variables)
 
-        posicion_alien = int(input("Ingrese la posicion donde desea iniciar "))
-        alien = Alien(posicion_alien)
+        coordenadas = input("Ingrese las coordenadas donde desea iniciar ")
+        fila_alien, columna_alien = map(int, coordenadas.split(","))
+        celda_alien = tablero.buscarPos(fila_alien-1)
+        fila_alien = celda_alien.valor
+        nodo_alien = fila_alien.buscarPos(columna_alien-1)
+        nodo_alien.valor = Alien("👽")
+
+        print(tablero)
+
 
 
 def main():

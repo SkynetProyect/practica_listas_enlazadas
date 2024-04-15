@@ -1,6 +1,6 @@
 from juego.controlador.logica.LinkedList import LinkedList
 from juego.modelo.abs.Nodo import Nodo
-
+from juego.modelo.Alien import Alien
 
 class Matriz(LinkedList):
     def __init__(self, large):
@@ -24,9 +24,16 @@ class Matriz(LinkedList):
     def __str__(self):
         result = []
         for i in self:
-            row =" ".join(str(x.valor) for x in i.valor)
-            result.append(row)
-        return"\n".join(result)
+            fila =" "
+            for y in i.valor:
+                if isinstance(y.valor, Alien):
+                    fila+=y.valor.valor
+                else:
+                    fila+= str(y.valor)
+                fila+= " "
+            result.append(fila)
+        return "\n".join(result)
+
 
 
 matris = Matriz(2)
