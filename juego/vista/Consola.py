@@ -15,13 +15,15 @@ def menu():
         print(tablero_con_variables)
 
         coordenadas = input("Ingrese las coordenadas donde desea iniciar ")
-        fila_alien, columna_alien = map(int, coordenadas.split(","))
-        celda_alien = tablero.buscarPos(fila_alien-1)
-        fila_alien = celda_alien.valor
-        nodo_alien = fila_alien.buscarPos(columna_alien-1)
-        nodo_alien.valor = Alien("👽")
+        fila, columna = map(int, coordenadas.split(","))
+
+        celda_fila = tablero.buscarPos(fila-1)
+        fila_alien = celda_fila.valor
+        columna_alien = fila_alien.buscarPos(columna-1)
+        columna_alien.valor = Alien("👽")
 
         print(tablero)
+
 
 
 
