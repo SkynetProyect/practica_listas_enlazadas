@@ -20,10 +20,13 @@ class Matriz(LinkedList):
                     for y in range(large-1):
                         _lista.agregar(" ")
                     self.agregar(_lista)"""
-
+ 
     def __str__(self):
-        result = [str(x.valor) for x in self]
-        return ' '.join(result)
+        result = []
+        for i in self:
+            row ="  ".join(str(x.valor) for x in i.valor)
+            result.append(row)
+        return"\n".join(result)
 
 
 matris = Matriz(2)
