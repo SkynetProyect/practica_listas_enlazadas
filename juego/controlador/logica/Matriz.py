@@ -24,7 +24,7 @@ class Matriz(LinkedList):
     def __str__(self):
         result = []
         for i in self:
-            row ="  ".join(str(x.valor) for x in i.valor)
+            row =" ".join(str(x.valor) for x in i.valor)
             result.append(row)
         return"\n".join(result)
 

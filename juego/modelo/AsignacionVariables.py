@@ -26,6 +26,6 @@ class MatrizConVariables:
 
 
 matriz= Matriz(2)
-n = 50
+n = 80
 matriznueva = MatrizConVariables(matriz, n )
 print(matriz)
