@@ -2,6 +2,7 @@ from juego.controlador.logica.Matriz import Matriz
 import random
 
 class MatrizConVariables():
+
     def __init__(self, matriz, n):
         self.matriz = matriz
         self.n = n
@@ -17,9 +18,9 @@ class MatrizConVariables():
         for i in self.matriz:
                 for y in i.valor:
                     if random.random() < n/100:
-                        y.valor = random.choice(["+ ", "- "])
+                        y.valor = random.choice([" + ", " - "])
                     else:
-                        y.valor = "** "
+                        y.valor = " ___ "
 
 
 

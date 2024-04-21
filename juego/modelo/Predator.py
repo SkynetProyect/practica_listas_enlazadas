@@ -2,6 +2,9 @@ from juego.modelo.abs.Nodo import Nodo
 
 
 class Predator(Nodo):
-    def __init__(self, valor: object):
-        super().__init__("🤖")
+    def __init__(self, valor):
+        super().__init__(valor)
         self.vida: int = 50
+
+
+

@@ -3,5 +3,8 @@ class Nodo:
         self.previo: Nodo = None
         self.valor = valor
         self.siguiente: Nodo = None
+        self.tipo: str
 
+    def __str__(self):
+        return self.valor
 

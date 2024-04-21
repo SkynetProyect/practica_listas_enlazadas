@@ -5,7 +5,8 @@ class Variable(Nodo):
     def __init__(self, valor: object):
         super().__init__(valor)
         self.vida: int
-        if valor == "+":
+        if valor == " + ":
             self.vida = 10
         else:
             self.vida = -10
+        self.tipo = "V"
