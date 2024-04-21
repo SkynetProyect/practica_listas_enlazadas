@@ -9,3 +9,4 @@ class Variable(Nodo):
             self.vida = 10
         else:
             self.vida = -10
+

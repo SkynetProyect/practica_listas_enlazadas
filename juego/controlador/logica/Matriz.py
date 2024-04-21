@@ -1,7 +1,7 @@
 from juego.controlador.logica.LinkedList import LinkedList
 from juego.modelo.abs.Nodo import Nodo
 from juego.modelo.Alien import Alien
-
+from juego.modelo.Predator import Predator
 class Matriz(LinkedList):
     def __init__(self, large):
         inicial: Nodo = Nodo(LinkedList(Nodo("**")))
@@ -27,7 +27,9 @@ class Matriz(LinkedList):
             fila =" "
             for y in i.valor:
                 if isinstance(y.valor, Alien):
-                    fila+=y.valor.valor
+                    fila += y.valor.valor
+                elif isinstance(y.valor, Predator):
+                    fila += y.valor.valor
                 else:
                     fila+= str(y.valor)
                 fila+= " "
